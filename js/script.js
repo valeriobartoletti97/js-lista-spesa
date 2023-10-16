@@ -1,20 +1,10 @@
-const buttonEl = document.querySelector('.btn-success');
-let data = document.getElementById('data');
-
 let productsBought = [];
-
-buttonEl.addEventListener('click', function(){
-    let products = data.value;
-    let i = 0 
-    productsBought.push(products)
-    if (products === 'stop'){
-        
-    }
-    /* while(products === 'stop'){
-        productsBought.push(products);
-        i++;
-    } */
-    console.log(productsBought)
-})
+let objects
+while (objects != 'stop') {
+    objects = prompt('Inserisci i prodotti da acquistare e scrivere "stop" una volta terminata la lista')
+    productsBought.push(objects)   
+}
+productsBought.pop()
+console.log(productsBought)
 
 
